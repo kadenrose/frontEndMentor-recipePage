@@ -19,48 +19,93 @@
 }
 
 html {
-    background-color: var(--stone-900);  /* TEMP */
+    background-color: var(--stone-100);  /* TEMP */
     max-width: 1440px;
+    display: flex;
+    justify-content: center;
 }
 
 body {
-    /* max-width: 740px; */
-    display: grid;
-    /* place-items: center; */
-    grid-template-columns: 1fr 740px 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: none;
+    width: 740px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 14px;
+    font-family: var(--typefacetwo);
+    color: var(--stone-600);
 }
 
-header {
-    grid-column-start: 2;
-    /* grid-row: 1/2; */
+body img{
+    width: 100%;
+    border-radius: 14px;
 }
 
-main {
-    grid-column-start: 2;
-    /* grid-row: 2/3; */
+li {
+    line-height: 1.8;
 }
 
 footer {
-    grid-column-start: 2;
-    /* grid-row: 3/4; */
+    background-color: var(--rose-50);
+    border-radius: 14px;
+    padding: 15px 0px 15px 20px;
+}
+
+h1 {
+    color: var(--stone-900);
 }
 
 h1, h2, h3 {
     font-family: var(--typefaceone);
 }
 
-h1 {
-    color: var(--black);
-}
-
 h2, td:nth-child(even), li::marker {
     color: var(--brown);
 }
 
-#preptime li::marker, h3 {
+#prepTime li::marker, h3 {
     color: var(--rose-800);
+}
+
+ol li::marker {
+    font-weight: bold;
+    content: counter(list-item) ".        ";
+}
+
+#prepTime h3{
+    font-family: var(--typefacetwo);
+}
+
+#prepTime {
+    background-color: var(--rose-50);
+    border-radius: 14px;
+    padding: 15px 0px 15px 20px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 14px;
+    text-align: left;
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+@media screen and (max-width:600px){
+    /* html {
+        max-width:  
+    } */
+
+    body {
+        width: auto;
+    }
+
+    body img{
+        width: 100%;
+    }
 }
 
 /* # Front-end Style Guide
